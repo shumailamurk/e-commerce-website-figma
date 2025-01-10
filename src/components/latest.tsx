@@ -1,4 +1,4 @@
-// src/components/LatestProducts.tsx
+
 
 import React from "react";
 
@@ -52,7 +52,8 @@ const LatestProducts: React.FC = () => {
   return (
     <section className="py-16 bg-white">
       <div className="max-w-6xl mx-auto px-6">
-        {/* Section Title */}
+      
+        {/* Section  */}
         <h2 className="text-3xl font-bold text-blue-800 text-center mb-6">
           Latest Products
         </h2>
@@ -89,7 +90,7 @@ const LatestProducts: React.FC = () => {
                 />
               </div>
 
-              {/* Product Info */}
+              {/* Product  */}
               <h3 className="text-gray-800 font-semibold mb-2">{product.name}</h3>
               <div className="text-gray-500">
                 <span className="text-red-500 line-through mr-2">
@@ -98,14 +99,13 @@ const LatestProducts: React.FC = () => {
                 <span>${product.price.toFixed(2)}</span>
               </div>
 
-              {/* Sale Badge */}
+              {/* Sale  */}
               {product.sale && (
                 <div className="absolute top-4 right-4 bg-pink-500 text-white text-xs px-2 py-1 rounded">
                   Sale
                 </div>
               )}
 
-              {/* Hover Icons */}
               <div className="flex justify-center space-x-4 mt-4 opacity-0 group-hover:opacity-100 transition-opacity">
                 <button className="bg-gray-100 p-2 rounded-full hover:bg-pink-100">
                   ❤

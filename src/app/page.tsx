@@ -4,8 +4,8 @@ import Lettersubs from '@/components/lettersubs'
 import ShopexOffer from '@/components/shopex'
 import Trending from '@/components/trending'
 import Uniquefeature from '@/components/uniquefeature'
-import Products from './products/page'
 import React from 'react'
+
 
 const Page = () => {
   return (
@@ -19,7 +19,7 @@ const Page = () => {
       <Trending />
       <ShopexOffer/>
       <Lettersubs />
-      <Products/>
+     
       
     </div>
   )

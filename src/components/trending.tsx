@@ -45,7 +45,6 @@ const Trending = () => {
                   key={index}
                   className="bg-white shadow-lg rounded-lg p-4 text-center border border-gray-200 relative"
                 >
-                  {/* Product Image */}
                   <div className="w-full h-40 bg-gray-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
                     <img
                       src={product.image}
@@ -54,7 +53,7 @@ const Trending = () => {
                     />
                   </div>
     
-                  {/* Product Info */}
+                  {/* Product  */}
                   <h3 className="text-gray-800 font-semibold mb-2">{product.name}</h3>
                   <div className="text-gray-500">
                     <span className="text-blue-900 line-through mr-2">

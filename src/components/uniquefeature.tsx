@@ -1,38 +1,44 @@
-// src/components/Uniquefeature.jsx
+import Link from 'next/link';
 import React from 'react';
 
 const Uniquefeature = () => {
   return (
-    <div className="flex items-center justify-center bg-purple-50 w-full h-[400px] ">
-      <div className="flex items-center justify-center w-1/2 h-full ">
+    <div className="flex flex-wrap items-center justify-center bg-purple-50 w-full h-auto py-8 px-4">
+      {/* Image Section */}
+      <div className="w-full md:w-1/2 flex justify-center mb-6 md:mb-0">
         <img
-          src="/uniquesofa.png.png" // Replace with actual image path
+          src="/uniquesofa.png.png"
           alt="Product Image"
-          className="w-[400px] h-[400px] object-cover rounded-lg"
+          className="w-[300px] h-[300px] md:w-[400px] md:h-[400px] object-cover rounded-lg"
         />
       </div>
 
-      <div className="w-1/2 pl-8">
-        <h1 className="text-blue-800 text-2xl font-semibold text-left">
+      {/* Content Section */}
+      <div className="w-full md:w-1/2 px-4">
+        <h1 className="text-blue-800 text-xl md:text-2xl font-semibold text-center md:text-left">
           Unique Features of Latest & <br /> Trending Products
         </h1>
-        <ol className="list-none pl-6 mt-4">
-          <li className="relative mb-2 text-gray-500">
-            <span className="absolute left-[-1.5rem] top-0 text-red-500 text-2xl">•</span>
-            All frames constructed with hardwood solids and laminates
+        <ol className="list-none mt-4 space-y-3">
+          <li className="relative text-gray-500">
+            <span className="absolute left-0 md:left-[-1.5rem] text-red-500 text-2xl">•</span>
+            <span className="pl-6">All frames constructed with hardwood solids and laminates</span>
           </li>
-          <li className="relative mb-2 text-gray-500">
-            <span className="absolute left-[-1.5rem] top-0 text-blue-500 text-2xl">•</span>
-            All frames constructed with hardwood solids and laminates
+          <li className="relative text-gray-500">
+            <span className="absolute left-0 md:left-[-1.5rem] text-blue-500 text-2xl">•</span>
+            <span className="pl-6">All frames constructed with hardwood solids and laminates</span>
           </li>
-          <li className="relative mb-2 text-gray-500">
-            <span className="absolute left-[-1.5rem] top-0 text-[#6cd5f8] text-2xl">•</span>
-            All frames constructed with hardwood solids and laminates
+          <li className="relative text-gray-500">
+            <span className="absolute left-0 md:left-[-1.5rem] text-[#6cd5f8] text-2xl">•</span>
+            <span className="pl-6">All frames constructed with hardwood solids and laminates</span>
           </li>
         </ol>
-        <br />
-<button className='bg-pink-500 rounded-sm w-32 h-10'>Add to Cart</button>
-
+        <div className="flex justify-center md:justify-start mt-6">
+          <Link href="/shop">
+            <button className="bg-pink-500 text-white rounded-sm px-6 py-2 hover:bg-pink-600 transition-colors">
+              Add to Cart
+            </button>
+          </Link>
+        </div>
       </div>
     </div>
   );
