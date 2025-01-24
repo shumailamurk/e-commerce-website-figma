@@ -1,35 +1,27 @@
-// pages/products/page.tsx
 import Prodimage from "./prodimage";
 import Productdescrip from "./productdescrip";
 import Productitem from "./productitem";
 
 const Products = () => {
   return (
-    <div className="bg-purple-100 w-full h-auto flex flex-col items-center justify-start py-10">
-      {/* Heading */}
-      <h1 className="text-3xl font-bold text-gray-800 mb-6">Products Detail</h1>
-
-      {/* Breadcrumbs */}
+    
+    <div className="bg-purple-100 w-full  flex-col items-center justify-start py-10 grid sm:grid-cols-1  lg:grid-cols-2 xl:flex"> {/* Adjust height and remove fixed h-[200px] */}
+      <h1 className="text-3xl font-bold text-gray-800 mt-10 sm:mx-10">Products</h1>
       <div className="mt-4 text-gray-600">
         <span>Home</span>
         <span className="mx-2">/</span>
         <span>Page</span>
         <span className="mx-2">/</span>
-        <span className="text-pink-500 font-semibold">Products</span>
+        <span className="text-pink-500 font-semibold">Products Listing</span>
       </div>
 
-      {/* Product Components */}
-      <div className="mt-8 w-full px-4 flex flex-col justify-center gap-8">
-        <div className="w-full">
-          <Productitem />
-        </div>
-        <div className="w-full">
-          <Productdescrip />
-        </div>
-        <div className="w-full">
-          <Prodimage />
-        </div>
+      <div className="mt-10 w-full"> {/* Adjusted margin-top */}
+      
       </div>
+
+<Prodimage/>
+<Productdescrip/>
+<Productitem/>
     </div>
   );
 };

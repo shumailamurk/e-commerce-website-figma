@@ -27,7 +27,7 @@ function OrderCompleted() {
         </p>
 
         {/* Continue Shopping Button */}
-        <Link href="/shop">
+        <Link href="/products">
           <button className="bg-pink-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-pink-700 transition">
             Continue Shopping
           </button>

@@ -75,7 +75,7 @@ function Hero() {
           {current.description}
         </p>
         <Link
-          href="/shoplist"
+          href="/products"
           className="inline-block bg-pink-500 text-white text-sm font-medium py-3 px-6 rounded-md mt-6 hover:bg-pink-600 transition-all duration-300 w-1/3 text-center"
         >
           {current.buttonText}

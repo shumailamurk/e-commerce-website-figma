@@ -118,7 +118,7 @@ const Shopimages = () => {
           <hr className="w-full border-t-2 border-[green] my-4" />
           <br />
 
-          <Link href="/">
+          <Link href="/shipment">
             <button className="px-7 py-3 bg-green-500 text-white text-sm rounded-md font-medium hover:bg-green-400 mx-10 ">
               Proceed to Checkout
             </button>
