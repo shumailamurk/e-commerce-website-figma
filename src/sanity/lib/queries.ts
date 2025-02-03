@@ -1,5 +1,22 @@
-import { groq } from "next-sanity";
+ import { groq } from "next-sanity";
+
+// export const allProduct = groq`*[_type == "product"]`;
+// export const four = groq`*[_type == "product"][0..3]`;
+// export const productBySlug = groq`*[_type == "product" && slug.current == $slug][0]`;
+
 
 export const allProduct = groq`*[_type == "product"]`;
 export const four = groq`*[_type == "product"][0..3]`;
-export const productBySlug = groq`*[_type == "product" && slug.current == $slug][0]`;
+export const productBySlug = groq`
+  *[_type == "product" && slug.current == $slug][0] {
+    _id,
+    name,
+    price,
+    oldPrice,
+    description,
+    details,  
+    ratings,  
+    image,
+    "slug" : slug.current
+  }
+`;

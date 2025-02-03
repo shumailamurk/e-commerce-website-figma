@@ -15,7 +15,9 @@ const productBySlug = `
     _id,
     name,
     price,
-    description, // Add the description field
+    description,
+    details, // Fetch product details
+    ratings, // Fetch product ratings
     image,
     "slug" : slug.current
   }
@@ -66,6 +68,7 @@ export default async function Prodimage({ params }: ProdimageProps) {
             />
           )}
         </div>
+
         {/* Details Section */}
         <div className="flex flex-col gap-8">
           <h1 className="text-4xl font-bold">
@@ -74,10 +77,28 @@ export default async function Prodimage({ params }: ProdimageProps) {
           <p className="text-2xl font-sans">
             {product.price ? `$${product.price}` : "Price not available"}
           </p>
+
           {/* Description Section */}
           <p className="text-lg text-gray-600 leading-relaxed">
             {product.description || "No detailed description available for this product."}
           </p>
+
+          {/* Details Section */}
+          {product.details && (
+            <p className="text-lg text-gray-600">
+              <span className="font-semibold">Details: </span>{product.details}
+            </p>
+          )}
+
+          {/* Ratings Section */}
+          {product.ratings !== undefined && (
+            <div className="flex items-center text-yellow-500">
+              {Array.from({ length: Math.round(product.ratings) }).map((_, index) => (
+                <span key={index}>⭐</span>
+              ))}
+              {product.ratings && <span className="ml-2">({product.ratings})</span>}
+            </div>
+          )}
         </div>
       </div>
     </div>
